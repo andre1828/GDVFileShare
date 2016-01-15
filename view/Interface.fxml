@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.InterfaceController">
+   <children>
+      <TabPane layoutX="260.0" layoutY="141.0" prefHeight="600.0" prefWidth="600.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab closable="false" text="Client">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="selectFiles" layoutX="33.0" layoutY="27.0" mnemonicParsing="false" onAction="#selectFilesBtnAction" text="Select files" />
+                        <TextField fx:id="destinationIP" alignment="CENTER" layoutX="34.0" layoutY="86.0" onAction="#selectFilesBtnAction" prefHeight="25.0" prefWidth="533.0" promptText="Destination IP" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" />
+                        <TextField fx:id="destinationPort" alignment="CENTER" layoutX="33.0" layoutY="161.0" prefHeight="25.0" prefWidth="533.0" promptText="Destination Port" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" />
+                        <TableView fx:id="fileTableClient" layoutY="294.0" prefHeight="277.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="fileColumn" editable="false" prefWidth="458.0" text="File" />
+                            <TableColumn fx:id="statusColumn" editable="false" prefWidth="140.0" text="Status" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="sendFiles" layoutX="266.0" layoutY="261.0" mnemonicParsing="false" text="Send files" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Server">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="fileTableServer" layoutX="200.0" layoutY="322.0" prefHeight="303.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="458.0" text="File" />
+                            <TableColumn editable="false" prefWidth="140.0" text="Status" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="startServer" layoutX="262.0" layoutY="176.0" mnemonicParsing="false" text="Start server" />
+                        <TextField fx:id="portServer" alignment="CENTER" layoutX="54.0" layoutY="85.0" prefHeight="25.0" prefWidth="321.0" promptText="Port" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" />
+                        <Label fx:id="serverStatus" layoutX="267.0" layoutY="242.0" text="Server status" textFill="#2417d7" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
