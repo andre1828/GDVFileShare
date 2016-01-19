@@ -7,7 +7,7 @@ import javafx.collections.ObservableList;
 
 public class Converter {
 
-	public ObservableList<File> toObservableFile(List<java.io.File> fileList)
+	public ObservableList<File> toObservableList(List<java.io.File> fileList)
 	{
 		ObservableList<File> observableList = FXCollections.observableArrayList();
 		for (java.io.File file : fileList)
@@ -17,5 +17,12 @@ public class Converter {
 		
 		return observableList;
 		
+	}
+	
+	public File toModelFile(java.io.File file)
+	{
+		File modelFile = new File(file.getName(), file.getAbsolutePath());
+		modelFile.setFileStatus("Received");
+		return modelFile;
 	}
 }

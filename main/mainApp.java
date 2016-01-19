@@ -20,7 +20,6 @@ public class mainApp extends Application {
 	private ObservableList<File> fileList = FXCollections.observableArrayList();
 	private ObservableList<File> receivedFilesList = FXCollections.observableArrayList();
 	
-	
 	@Override
 	public void start(Stage primaryStage) {
 		this.stage = primaryStage;
